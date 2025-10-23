@@ -1,3 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Página de Giovany cargada correctamente 🚀");
-});
+const logo = document.querySelector('.logo');
+if (logo) {
+  logo.addEventListener('click', () => {
+    console.log('Logo clicado');
+  });
+}
