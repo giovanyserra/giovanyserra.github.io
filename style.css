@@ -1,3 +1,4 @@
+/* --- Reset y base --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +11,51 @@ body {
   color: #333;
   background: #f6f8fa;
   line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* --- Layout general --- */
+.layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Panel lateral fijo */
+#sidebar {
+  background: linear-gradient(180deg, #004e92, #000428);
+  color: white;
+  width: 300px;
+  padding: 2em 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sidebar .profile-pic {
+  width: 100px;               /* ancho más chico */
+  height: 100px;              /* mantiene proporción */
+  border-radius: 50%;         /* forma circular */
+  border: 3px solid #ffffff;  /* borde blanco */
+  object-fit: cover;          /* recorta sin deformar */
+  aspect-ratio: 1 / 1;        /* garantiza proporción 1:1 (nuevo estándar CSS) */
+  display: block;
+  margin: 0 auto 1em auto;    /* centra horizontalmente */
+}
+
+/* Contenido principal */
+main {
+  margin-left: 300px;
+  padding: 2em;
+  flex: 1;
+  overflow-x: hidden;
 }
 
 /* --- Header --- */
@@ -39,23 +85,6 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-}
-
-/* --- Hero section --- */
-#hero {
-  text-align: center;
-  padding: 5em 2em;
-  background: linear-gradient(135deg, #c1f5f7, #4bedf8);
-  color: black;
-}
-
-#hero .profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;   /* recorta la imagen para llenar el contenedor sin deformarla */
-  border: 3px solid white;
-  margin-bottom: 1em;
 }
 
 .social-links a {
