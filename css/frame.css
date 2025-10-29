@@ -488,7 +488,7 @@ hr {
 
 .image-profile {
   border-radius: 50%;
-  width: 40vw;
+  width: 30%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
   margin: 15px 0;
@@ -498,8 +498,6 @@ hr {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  display: flex;
-  align-self: center;
 }
 
 .image.center {
